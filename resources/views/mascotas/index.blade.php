@@ -56,9 +56,11 @@
                 <td>{{ $mascota->estado }} </td>
                 <td>
 
-                    <a href="{{ route('mascotas.edit', $mascota) }}" class="btn btn-warning">
-                        <i class="fa-regular fa-pen-to-square"></i>
-                    </a>
+                    @if(auth()->user()->cargo)
+                        <a href="{{ route('mascotas.edit', $mascota) }}" class="btn btn-secondary">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </a>
+                    @endif
                     <form action="{{ route('mascotas.destroy', $mascota) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
