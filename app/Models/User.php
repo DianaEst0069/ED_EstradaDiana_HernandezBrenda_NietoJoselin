@@ -24,8 +24,13 @@ class User extends Authenticatable
         'edad',
         'domicilio',
         'password',
+        'cargo',
     ];
 
+    //Generar cast para cambiar el valor númerico a boolean
+    protected $cast = [
+        'cargo' => 'boolean',
+    ];
     /**
      * The attributes that should be hidden for serialization.
      *
