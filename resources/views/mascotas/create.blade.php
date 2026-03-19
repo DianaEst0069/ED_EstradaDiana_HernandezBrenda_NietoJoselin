@@ -40,10 +40,9 @@
         </div>
 
          <div class="input-group mb-3">
-            
-            <label><input type="checkbox" name="estado" checked>
-               Estado
-            </label>
+            <span class="input-group-text" id="basic-addon1"> <i class="fa-solid fa-calendar-days" style="color: rgb(70, 27, 12);"></i> </span>
+            <input type="text" name='estado' placeholder='Estado (Activo/Inactivo)' class="form-control">
+        
         </div>
 
         <button type="submit" class="btn btn-outline-primary"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>

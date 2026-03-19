@@ -39,7 +39,7 @@ class MascotaController extends Controller
             'raza' => $request->raza,
             'color' => $request->color, 
             'edad' => $request->edad, 
-            'estado' => $request->has('estado'),
+            'estado' => $request->estado,
         ]);
 
         //Enviar al usuario a otra página
@@ -74,13 +74,9 @@ class MascotaController extends Controller
             'raza' => 'required',
             'color' => 'required',
             'edad' => 'required',
-            'estado' => 'required|sometimes|accepted',
+            'estado' => 'required',
 
         ]);
-
-        $all = $request->except('estado');
-        $all['estado']=$request->has('estado');
-        $mascota->update($all);
 
         $mascota->update($request->all());
 

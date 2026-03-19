@@ -9,7 +9,4 @@ class Mascota extends Model
     //
     protected $fillable = ['nombre', 'raza','color','edad','estado'];
 
-    protected $cast = [
-        'estado' => 'boolean',
-    ];
 }

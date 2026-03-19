@@ -25,9 +25,7 @@
         <br>
         <input type="number" name="edad" value="{{ $mascota -> edad}}" placeholder="Edad" class="form-control">
         <br>
-        <label><input type="checkbox" name="estado" value="{{ $mascota -> estado}}" placeholder="Estado">
-               Estado Activo
-        </label>
+        <input type="text" name="estado" value="{{ $mascota -> estado}}" placeholder="Estado" class="form-control">
         <br>
         <button type="submit" class="btn btn-success">Guardar</button>
     </form>
