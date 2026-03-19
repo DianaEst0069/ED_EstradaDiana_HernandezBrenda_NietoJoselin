@@ -24,9 +24,9 @@ class AdminMiddleware
         }
 
         //Validar si el usuario actual es administrador
-        if(!Auth::user()->is_admin){
-            return redirect()->route('libros.index')
-            ->with('error', 'No cuentas con permisos de administrador');
+        if(!Auth::user()->cargo){
+            return redirect()->route('mascotas.index')
+            ->with('error', 'No cuentas con permisos de dueña');
         }
 
         return $next($request);
